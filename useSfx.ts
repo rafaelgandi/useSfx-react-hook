@@ -28,7 +28,7 @@ export default function useSpecialEffect(
                 for (let p in check) {
                     if (!(p in prevRef.current)) { 
                         if (renderCountRef.current > 1) {
-                            throw new Error(`useSpecialEffect() -> Looks like you are missing updatable "${p}". Please remove it from .hasChanged() or add it to the updatables object. For example: useSpecialEffect(..., {${p}, ...})`);
+                            throw new Error(`useSpecialEffect() -> Looks like you are missing updatable "${p}". Please remove it from .hasChanged() or add it to the updatables object. For example: useSfx(..., {${p}, ...})`);
                         }
                         return true;
                     }
